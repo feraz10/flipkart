@@ -7,6 +7,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
@@ -27,6 +28,7 @@ public class PlacedOrderAddress implements Serializable {
 	@ManyToOne
 	@JoinColumn(name = "order_id")
 	private PlacedOrderDetails details;
+	
 
 	@Column(name = "address")
 	private String address;

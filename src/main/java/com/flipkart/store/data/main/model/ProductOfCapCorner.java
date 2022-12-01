@@ -23,15 +23,42 @@ public class ProductOfCapCorner implements Serializable {
 		super();
 	}
 
+	public ProductOfCapCorner(int category_id , String productName, String productsize,
+			String brandName, String productDescription, String productCode, BigDecimal marketPrice,
+			BigDecimal discount, BigDecimal finalPrice) {
+		super();
+		
+		this.category_id=category_id;
+		this.productName = productName;
+		this.productsize = productsize;
+		this.brandName = brandName;
+		this.productDescription = productDescription;
+		this.productCode = productCode;
+		this.marketPrice = marketPrice;
+		this.discount = discount;
+		this.finalPrice = finalPrice;
+	}
+
+
+	
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "product_id")
 	private int productId;
 
-	@ManyToOne
-	@JoinColumn(name ="category_id")
+//	@ManyToOne
+//	@JoinColumn(name ="category_id")
+//	
+//	private CategoryOfCapCorner ofCapCorner;
+
+
+
+
 	
-	private CategoryOfCapCorner ofCapCorner;
+
+	@Column(name ="category_id")
+	private int category_id;
 
 	@Column(name = "product_name")
 	private String productName;
@@ -133,12 +160,18 @@ public class ProductOfCapCorner implements Serializable {
 		this.finalPrice = finalPrice;
 	}
 
-	public CategoryOfCapCorner getOfCapCorner() {
-		return ofCapCorner;
+	
+
+
+
+
+
+	public int getCategory_id() {
+		return category_id;
 	}
 
-	public void setOfCapCorner(CategoryOfCapCorner ofCapCorner) {
-		this.ofCapCorner = ofCapCorner;
+	public void setCategory_id(int category_id) {
+		this.category_id = category_id;
 	}
 
 }

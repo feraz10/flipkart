@@ -85,14 +85,7 @@ public class CategoryOfCapCorner implements Serializable {
 		this.categoryActive = categoryActive;
 	}
 
-	public List<ProductOfCapCorner> getCorners() {
-		return corners;
-	}
-
-	public void setCorners(List<ProductOfCapCorner> corners) {
-		this.corners = corners;
-	}
-
+	
 
 
 	
